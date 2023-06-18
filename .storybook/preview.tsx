@@ -1,6 +1,6 @@
 import type { Preview } from "@storybook/react";
 import React from "react";
-import "./index.css";
+import "./output.css";
 
 import { withThemeByClassName } from "@storybook/addon-styling";
 
@@ -15,8 +15,7 @@ const preview: Preview = {
     },
   },
   decorators: [
-    (Story) => <Story />, // Adds theme switching support.
-    // NOTE: requires setting "darkMode" to "class" in your tailwind config
+    (Story) => <Story />,
     withThemeByClassName({
       themes: {
         light: "light",

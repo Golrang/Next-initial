@@ -4,14 +4,17 @@ const config = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "storybook-dark-mode",
+    "@storybook/addon-styling",
+    {
+      name: "@storybook/addon-styling",
+      options: {},
+    },
   ],
   framework: {
     name: "@storybook/react-vite",
     options: {},
   },
   features: {
-    //storyStoreV7: true,
     interactionsDebugger: true,
     buildStoriesJson: true,
   },
