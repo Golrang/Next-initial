@@ -36,7 +36,7 @@ const ProfilePanelContainer = async () => {
   const result = await getData("https://jsonplaceholder.typicode.com/users/1");
   console.log(result)
   return (
-    <ProfilePanel name={result.name} position={result.email} number_of_visit={result.company.name.length} number_of_immprestion={result.phone.length} my_items={result.website} />
+    <ProfilePanel name={result.name} position={result.email} number_of_visit={result.company.name.length} number_of_impression={result.phone.length} my_items={result.website} />
   );
 };
 
