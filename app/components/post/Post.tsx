@@ -9,7 +9,7 @@ const useGetUser = async () => {
   return users.json();
 };
 
-const PostHeader = (PostUser: any) => {
+export const PostHeader = (PostUser: any) => {
   return (
     <div className="flex justify-between ">
       <div className="flex space-x-3">
@@ -45,12 +45,12 @@ const PostHeader = (PostUser: any) => {
   );
 };
 
-const PostBody = (Post: any) => {
+export const PostBody = (props: any) => {
   return (
     <>
       <div className="w-full mb-3">
         <span className="text-gray-700 dark:text-gray-500 text-center md:text-sm sm:text-xs">
-          {Post.Post.body}
+          {props.post.body}
         </span>
       </div>
       <div className="w-full mb-4">
@@ -64,7 +64,7 @@ const PostBody = (Post: any) => {
   );
 };
 
-const PostReactions = (PostUser: any) => {
+export const PostReactions = (PostUser: any) => {
   return (
     <>
       <div className="flex justify-between">
@@ -91,7 +91,7 @@ const PostReactions = (PostUser: any) => {
   );
 };
 
-const PostButtons = () => {
+export const PostButtons = () => {
   return (
     <div className="w-full flex justify-around">
       <button className="text-gray-700 dark:text-gray-500  py-1 px-4 flex">
