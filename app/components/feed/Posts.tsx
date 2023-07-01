@@ -18,7 +18,7 @@ export const Posts = () => {
     <>
       <section>
         {posts?.map((post) => {
-          return <div>{post.title}</div>;
+          return <div className="">{post.title}</div>;
         })}
       </section>
     </>
