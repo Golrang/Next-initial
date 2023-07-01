@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { ProfilePanel } from "../components/profile-panel";
 import { getUser } from "../page";
 
-export const ProfilePanelContainer = async () => {
+export const ProfilePanelContainer = () => {
   const { data: result } = useQuery(["user"], getUser, {
     enabled: false,
   });
