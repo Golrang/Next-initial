@@ -1,14 +1,3 @@
-const useGetPost = async () => {
-  const posts = await fetch("https://jsonplaceholder.typicode.com/posts/1");
-  const postsConverted = await posts.json();
-
-  return postsConverted;
-};
-const useGetUser = async () => {
-  const users = await fetch("https://jsonplaceholder.typicode.com/users/1");
-  return users.json();
-};
-
 export const PostHeader = (PostUser: any) => {
   return (
     <div className="flex justify-between ">
@@ -46,6 +35,7 @@ export const PostHeader = (PostUser: any) => {
 };
 
 export const PostBody = (props: any) => {
+  console.log("sec", props);
   return (
     <>
       <div className="w-full mb-3">
@@ -55,9 +45,10 @@ export const PostBody = (props: any) => {
       </div>
       <div className="w-full mb-4">
         <img
-          src="https://source.unsplash.com/random"
+          // src="https://source.unsplash.com/random"
+          src={props.post?.photo}
           alt="profileImage"
-          className="w-full h-auto"
+          className="w-full h-auto max-h-80 object-cover"
         />
       </div>
     </>
@@ -153,23 +144,4 @@ export const PostButtons = () => {
       </button>
     </div>
   );
-};
-
-export const Post = async () => {
-  const Post = await useGetPost();
-  const User = await useGetUser();
-  return (
-    <div className="bg-gray-300 w-full h-auto dark:bg-slate-50 p-6 rounded">
-      <PostHeader PostUser={User} />
-      <PostBody Post={Post} />
-      <PostReactions PostUser={User} />
-      <PostButtons />
-    </div>
-  );
-};
-
-export type TSubscriptionPanel = {
-  title: string;
-  description: string;
-  image: string;
 };

@@ -1,21 +1,21 @@
-import React from "react";
+// import React from "react";
 
-import {Hydrate, dehydrate} from "@tanstack/react-query";
-import {ProfilePanelContainer} from "./containers/Profile";
-import {SubscriptionPanelContainer} from "./containers/Subscription";
-import {getQueryClient} from "./provider/client";
-import {Feed} from "./components/feed/Feed";
-import {Post} from "./components/post";
+import { Hydrate, dehydrate } from "@tanstack/react-query";
+import { ProfilePanelContainer } from "./containers/Profile";
+import { SubscriptionPanelContainer } from "./containers/Subscription";
+import { getQueryClient } from "./provider/client";
+import { Feed } from "./components/feed/Feed";
+import { Post } from "./components/post";
 
 export const getUser = () =>
   fetch("https://jsonplaceholder.typicode.com/users/1")
-    .then(res => res.json())
-    .then(res => res);
+    .then((res) => res.json())
+    .then((res) => res);
 
 export const getPhoto = () =>
   fetch("https://jsonplaceholder.typicode.com/photos/1")
-    .then(res => res.json())
-    .then(res => res);
+    .then((res) => res.json())
+    .then((res) => res);
 
 const Home = async () => {
   const client = getQueryClient();
