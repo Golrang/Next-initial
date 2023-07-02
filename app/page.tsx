@@ -1,9 +1,11 @@
-import React from "react";
+// import React from "react";
 
 import { Hydrate, dehydrate } from "@tanstack/react-query";
 import { ProfilePanelContainer } from "./containers/Profile";
 import { SubscriptionPanelContainer } from "./containers/Subscription";
 import { getQueryClient } from "./provider/client";
+import { Feed } from "./components/feed/Feed";
+import { Post } from "./components/post";
 
 export const getUser = () =>
   fetch("https://jsonplaceholder.typicode.com/users/1")
@@ -27,7 +29,9 @@ const Home = async () => {
         <div className="col-span-1">
           <ProfilePanelContainer />
         </div>
-        <div className="col-span-2"></div>
+        <div className="col-span-2">
+          <Feed />
+        </div>
         <div className="col-span-1  flex flex-col">
           <div className="flex flex-col w-full h-80" />
           <SubscriptionPanelContainer />
