@@ -2,7 +2,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { SubscriptionPanel } from "../components";
-import { getPhoto } from "../page";
+import { getPhoto } from "../services/photos";
 
 export const SubscriptionPanelContainer = () => {
   const { data: result } = useQuery(["photo"], getPhoto, {

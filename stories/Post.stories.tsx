@@ -1,5 +1,5 @@
-import {Post} from "../app/components/post";
-import type {Meta, StoryObj} from "@storybook/react";
+import { Post } from "../components/post";
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Post> = {
   title: "Components/Post",

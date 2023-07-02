@@ -1,9 +1,9 @@
-import { getQueryClient } from "@/app/provider/client";
 import { dehydrate, Hydrate } from "@tanstack/react-query";
 import { AddPost } from "./AddPost";
 import { Posts } from "./Posts";
-import { getPosts } from "@/app/services/posts";
-import { getPhotos } from "@/app/services/photos";
+import { getPosts } from "@/services/posts";
+import { getQueryClient } from "@/provider/client";
+import { getPhotos } from "@/services/photos";
 
 // const getPosts = () =>
 //   fetch("https://jsonplaceholder.typicode.com/posts")

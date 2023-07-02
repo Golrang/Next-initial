@@ -1,3 +1,5 @@
+import { QueryKey } from "@tanstack/react-query";
+
 type TPhoto = {
   albumId: number;
   id: number;
@@ -6,8 +8,8 @@ type TPhoto = {
   thumbnailUrl: string;
 };
 
-export const getPhoto = (id: number) =>
-  fetch(`https://jsonplaceholder.typicode.com/photos/${id}`).then((res) =>
+export const getPhoto = () =>
+  fetch(`https://jsonplaceholder.typicode.com/photos/1`).then((res) =>
     res.json()
   );
 

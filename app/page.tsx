@@ -1,11 +1,11 @@
 // import React from "react";
 
 import { Hydrate, dehydrate } from "@tanstack/react-query";
-import { ProfilePanelContainer } from "./containers/Profile";
-import { SubscriptionPanelContainer } from "./containers/Subscription";
-import { getQueryClient } from "./provider/client";
-import { Feed } from "./components/feed/Feed";
-import { Post } from "./components/post";
+
+import { Feed } from "../components/feed/Feed";
+import { getQueryClient } from "@/provider/client";
+import { ProfilePanelContainer } from "@/containers/Profile";
+import { SubscriptionPanelContainer } from "@/containers/Subscription";
 
 export const getUser = () =>
   fetch("https://jsonplaceholder.typicode.com/users/1")

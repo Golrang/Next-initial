@@ -1,6 +1,6 @@
-import { SubscriptionPanel } from "@/app/components";
+import { SubscriptionPanel } from "@/components";
 import React from "react";
-import { Post } from "../components/post";
+import { Post } from "../../components/post";
 
 export const preload = (url: string) => {
   // void evaluates the given expression and returns undefined
